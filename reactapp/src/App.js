@@ -29,15 +29,11 @@ export default function App() {
                     console.error(err);
                 })
                 .then(result => {
-                    console.log(result.data);
-                    let confidence = result.data.confidence;
-                    console.log(`confidence is : ${confidence}`);
                     let text = "";
-                    for (let i of result.data.text)
-                        if ((i <= 'Z' && i >= 'A') || (i <= 'z' && i >= 'a') || (i >= '0' && i <= '9') || i === ' ')
-                            text += i;
-                    if (confidence > 50) {
-                        console.log(`Confidence is greater than 50 so logging text:`);
+                    if (result.data.confidence > 50) {
+                        for (let i of result.data.text)
+                            if ((i <= 'Z' && i >= 'A') || (i <= 'z' && i >= 'a') || (i >= '0' && i <= '9') || i === ' ' || i === ',' || i === '.' || i === '!' || i === '\'' || i === '"')
+                                text += i;
                         console.log(text);
                     }
                     setText(text);
