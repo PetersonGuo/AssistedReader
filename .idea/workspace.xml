@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="Basic Machine Learning Model">
+    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="String Parsing Added">
       <change afterPath="$PROJECT_DIR$/reactapp/src/Tesseract.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reactapp/src/results.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -237,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665865932413</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="String Parsing Added">
+      <created>1665870629598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665870629599</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +291,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Camera Module on React App" />
     <MESSAGE value="Basic Machine Learning Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Machine Learning Model" />
+    <MESSAGE value="String Parsing Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="String Parsing Added" />
   </component>
 </project>
