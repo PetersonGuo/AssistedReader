@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="Camera Module on React App">
-      <change afterPath="$PROJECT_DIR$/reactapp/src/Tesseract.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/src/preprocess.js" afterDir="false" />
+    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="Basic Machine Learning Model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/Camera.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +215,7 @@
       <workItem from="1665843292814" duration="384000" />
       <workItem from="1665843748860" duration="1240000" />
       <workItem from="1665848955418" duration="45000" />
-      <workItem from="1665849596514" duration="13084000" />
+      <workItem from="1665849596514" duration="14299000" />
     </task>
     <task id="LOCAL-00001" summary="Camera Module on React App">
       <created>1665853239744</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665853239744</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Basic Machine Learning Model">
+      <created>1665865932413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665865932413</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +277,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Camera Module on React App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Camera Module on React App" />
+    <MESSAGE value="Basic Machine Learning Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Machine Learning Model" />
   </component>
 </project>
