@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
+import Container from 'react-bootstrap/Container';
 
 const videoConstraints = {
     width: 440,
@@ -41,22 +42,23 @@ export default function App() {
         }, [webcamRef]);
 
     return (
-        <div className="App">
-            <main className="App-main">
-                <h3>Extracted text</h3>
-                {/*<Camera />*/}
-                <Webcam
-                audio={false}
-                height={600}
-                ref={webcamRef}
-                screenshotFormat="image/jpeg"
-                width={660}
-                videoConstraints={videoConstraints} />
-                <div className="text-box">
-                    <p> {text} </p>
-                </div>
-                <button onClick={handleClick} style={{height:50}}> convert to text</button>
-            </main>
-        </div>
+        <Container>
+            <div className="App">
+                <main className="App-main">
+                    <h1>Extracted text</h1>
+                    <Webcam
+                    audio={false}
+                    height={500}
+                    ref={webcamRef}
+                    screenshotFormat="image/jpeg"
+                    width={665}
+                    videoConstraints={videoConstraints} />
+                    <div className="text-box" style={{display: "flex", justifyContent: "center"}}>
+                        <p style={{textAlign: "center", maxWidth: "1000px"}}> {text} </p>
+                    </div>
+                    <button onClick={handleClick} style={{height:50}}> convert to text</button>
+                </main>
+            </div>
+        </Container>
     );
 }
