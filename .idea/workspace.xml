@@ -4,91 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python/recognized.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/.idea/reactapp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactapp/src/Camera.jsx" afterDir="false" />
+    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="Camera Module on React App">
+      <change afterPath="$PROJECT_DIR$/reactapp/src/Tesseract.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactapp/src/preprocess.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.buckconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.bundle/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.flowconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.node-version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.prettierrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.ruby-version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.watchmanconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/__tests__/App-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/_BUCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/build_defs.bzl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/debug.keystore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/debug/java/com/htv7project/ReactNativeFlipper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/java/com/htv7project/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/java/com/htv7project/MainApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/java/com/htv7project/newarchitecture/MainApplicationReactNativeHost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/java/com/htv7project/newarchitecture/components/MainComponentsRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/java/com/htv7project/newarchitecture/modules/MainApplicationTurboModuleManagerDelegate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/MainApplicationModuleProvider.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/MainApplicationModuleProvider.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/MainApplicationTurboModuleManagerDelegate.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/MainApplicationTurboModuleManagerDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/MainComponentsRegistry.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/MainComponentsRegistry.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/jni/OnLoad.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/drawable/rn_edit_text_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/.xcode.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project.xcodeproj/xcshareddata/xcschemes/HTV7Project.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/AppDelegate.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/Images.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/LaunchScreen.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7Project/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7ProjectTests/HTV7ProjectTests.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/HTV7ProjectTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ios/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/metro.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/Camera.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="py" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -293,8 +218,16 @@
       <workItem from="1665843292814" duration="384000" />
       <workItem from="1665843748860" duration="1240000" />
       <workItem from="1665848955418" duration="45000" />
-      <workItem from="1665849596514" duration="3363000" />
+      <workItem from="1665849596514" duration="13084000" />
     </task>
+    <task id="LOCAL-00001" summary="Camera Module on React App">
+      <created>1665853239744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665853239744</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +244,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/App" />
+                        <option value="origin/reactapp" />
                       </list>
                     </value>
                   </entry>
@@ -322,5 +255,24 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="reactapp" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Camera Module on React App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera Module on React App" />
   </component>
 </project>
