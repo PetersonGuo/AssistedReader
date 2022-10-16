@@ -3,7 +3,7 @@ import '../Cam.css';
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import Container from 'react-bootstrap/Container';
-import { useSpeechSynthesis } from "react-speech-kit";
+// import { useSpeechSynthesis } from "react-speech-kit";
 
 const videoConstraints = {
     width: 440,
@@ -12,34 +12,34 @@ const videoConstraints = {
 };
 
 export default function Cam() {
-
     const webcamRef = React.useRef(null);
     const [text, setText] = useState("");
 
-    const {speak} = useSpeechSynthesis();
+    const msg = new SpeechSynthesisUtterance();
 
     async function speech(txt) {
         txt = txt.replace(/ +/g, ' ');
         console.log('speech: ' + txt);
-        speak({text: ''+txt});
+        msg.text = txt;
+        window.speechSynthesis.speak(msg);
     }
     
-    async function correct(txt) {
-        const options = {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-                'X-RapidAPI-Host': 'jspell-checker.p.rapidapi.com'
-            },
-            body: '{"language":"enUS","fieldvalues":"thiss is intresting","config":{"forceUpperCase":false,"ignoreIrregularCaps":false,"ignoreFirstCaps":true,"ignoreNumbers":true,"ignoreUpper":false,"ignoreDouble":false,"ignoreWordsWithNumbers":true}}'
-        };
+    // async function correct(txt) {
+    //     const options = {
+    //         method: 'POST',
+    //         headers: {
+    //             'content-type': 'application/json',
+    //             'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+    //             'X-RapidAPI-Host': 'jspell-checker.p.rapidapi.com'
+    //         },
+    //         body: '{"language":"enUS","fieldvalues":"thiss is intresting","config":{"forceUpperCase":false,"ignoreIrregularCaps":false,"ignoreFirstCaps":true,"ignoreNumbers":true,"ignoreUpper":false,"ignoreDouble":false,"ignoreWordsWithNumbers":true}}'
+    //     };
         
-        fetch('https://jspell-checker.p.rapidapi.com/check', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-    }
+    //     fetch('https://jspell-checker.p.rapidapi.com/check', options)
+    //         .then(response => response.json())
+    //         .then(response => console.log(response))
+    //         .catch(err => console.error(err));
+    // }
 
     const handleClick = React.useCallback(
         () => {
