@@ -5,7 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Web/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/components/Description.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/components/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/components/ReadButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/CameraWebServer/CameraWebServer.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/CameraWebServer/app_httpd.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/CameraWebServer/camera_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/CameraWebServer/camera_pins.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/Esp.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/esp32_eduroam/esp32_eduroam.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Esp/esp32_eduroam/secrets.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/lite-model_keras-ocr_dr_2.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/recognized.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/components/Description.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/components/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/components/ReadButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/components/Description.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/components/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/components/ReadButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/Tesseract.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +80,23 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GAj9Bl4nrmqGtzFf3JPFdUZY3G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/petersonguo/Documents/HackValley/reactapp/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,6 +112,7 @@
       <workItem from="1665838243810" duration="4574000" />
       <workItem from="1665843292814" duration="384000" />
       <workItem from="1665843748860" duration="2056000" />
+      <workItem from="1665877510473" duration="2146000" />
     </task>
     <servers />
   </component>
@@ -54,10 +124,25 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Web" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: center;
+  text-align: center;
+  background-color: #ae00ff;
+  font-weight: bold;
+    color: white;
+}
+
+.subtitle {
+  flex: 1;
+  margin-left: 20;
+  font-size: 30;
+  font-weight: bold;
+  margin-top: 20;
+}
+
+.list {
+  flex: 1;
+  margin-left: 40;
+  font-size: 20;
+  margin-top: 30;
+  margin-bottom: 10;
+}
+
+.body {
+  background-color: blue;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+    background-color: blue;
+    flex: 1;
+}
+
+.description{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(253, 220, 170);
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px 0 0 10px;
+    justify-content: space-evenly;
+}
