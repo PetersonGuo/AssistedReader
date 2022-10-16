@@ -68,16 +68,14 @@ export default function Cam() {
         }, [webcamRef]);
 
     return (
-        <Container>
+        <Container style={{marginTop: "40px", marginBottom: "40px", justifyContent: "center", alignItems: "center", display: "flex"}}>
             <div className="App">
                 <main className="App-main">
                     <h1>Extracted text</h1>
                     <Webcam
                         audio={false}
-                        height={500}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        width={665}
                         videoConstraints={videoConstraints} />
                     <div className="text-box" style={{display: "flex", justifyContent: "center"}}>
                         <p style={{textAlign: "center", maxWidth: "1000px"}}> {text} </p>
