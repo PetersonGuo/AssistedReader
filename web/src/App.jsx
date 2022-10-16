@@ -16,7 +16,7 @@ class App extends Component {
                         l2="Transforms text recognized through a camera into speech"
                     />
                     <Description
-                        sub="How To Use Assistance Reader"
+                        sub="How Do You Use Assistance Reader?"
                         l1="Put on the pair of glasses"
                         l2="Press and hold button to translate any text it seen by the camera into speech"
                     />
