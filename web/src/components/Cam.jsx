@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './App.css';
+import '../Cam.css';
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import Container from 'react-bootstrap/Container';
@@ -10,7 +10,7 @@ const videoConstraints = {
     facingMode: "user"
 };
 
-export default function App() {
+export default function Cam() {
 
     const webcamRef = React.useRef(null);
     const [text, setText] = useState("");
@@ -45,12 +45,12 @@ export default function App() {
                 <main className="App-main">
                     <h1>Extracted text</h1>
                     <Webcam
-                    audio={false}
-                    height={500}
-                    ref={webcamRef}
-                    screenshotFormat="image/jpeg"
-                    width={665}
-                    videoConstraints={videoConstraints} />
+                        audio={false}
+                        height={500}
+                        ref={webcamRef}
+                        screenshotFormat="image/jpeg"
+                        width={665}
+                        videoConstraints={videoConstraints} />
                     <div className="text-box" style={{display: "flex", justifyContent: "center"}}>
                         <p style={{textAlign: "center", maxWidth: "1000px"}}> {text} </p>
                     </div>
