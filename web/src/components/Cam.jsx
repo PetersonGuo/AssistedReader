@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import '../Cam.css';
-import "react-convert-image";
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import Container from 'react-bootstrap/Container';

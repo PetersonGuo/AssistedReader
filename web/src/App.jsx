@@ -1,8 +1,10 @@
 import "./App.css";
 import "./style.css";
-import React, { Component } from "react";
+import React, { useState, Component } from "react";
 import Header from "./components/Header";
 import Description from "./components/Description";
+import "./components/Cam";
+import Cam from "./components/Cam";
 
 class App extends Component {
     render() {
@@ -26,7 +28,10 @@ class App extends Component {
                         l2="Click the button and listen as the text gets read out loud"
                     />
                 </div>
-            </div>
-        );
-    }
-} export default App;
+            <Cam/>
+        </div>
+    ); 
+    } 
+}
+
+export default App;
