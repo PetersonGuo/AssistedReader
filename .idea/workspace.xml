@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/Cam.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/Cam.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/Cam.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Cam.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/ReadButton.jsx" beforeDir="false" />
+    <list default="true" id="468f7c81-4284-47f1-b8dd-1633ddae78bd" name="Changes" comment="fixup! Final">
+      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="speech-synthesis" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +45,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Cam.jsx" />
+        <item itemvalue="Node.js.Cam.jsx" />
         <item itemvalue="Node.js.Cam.jsx" />
       </list>
     </recent_temporary>
@@ -82,7 +80,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/speech-synthesis" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -93,5 +91,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixup! Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixup! Final" />
   </component>
 </project>
