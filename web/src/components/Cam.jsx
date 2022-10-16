@@ -24,7 +24,7 @@ export default function Cam() {
             Tesseract.recognize(
                 imageSrc, 'eng',
                 {
-                    logger: m => console.log(m)
+                    logger: m => m
                 }
             )
                 .catch (x => {
