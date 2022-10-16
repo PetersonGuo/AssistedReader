@@ -14,18 +14,18 @@ class App extends Component {
                 <div className="container">
                     <Description
                         sub="What Is Assistance Reader?"
-                        l1="An app designed to allow blind individuals to read text"
+                        l1="An app designed to grant blind individuals the ability to read text"
                         l2="Transforms text recognized through a camera into speech"
                     />
                     <Description
                         sub="How Do You Use Assistance Reader?"
-                        l1="Put on the pair of glasses"
-                        l2="Press and hold button to translate any text it seen by the camera into speech"
+                        l1="Position some word(s)/text in front of the camera"
+                        l2="Press the Convert to Text button to translate it into speech"
                     />
                     <Description
                         sub="Now Try It Out!"
-                        l1="Click the Read button with your camera facing some text"
-                        l2="Listen as the text gets read out loud"
+                        l1="Go and find something that contains word(s)/text, and display it in front of the camera"
+                        l2="Click the button and listen as the text gets read out loud"
                     />
                 </div>
             <Cam/>

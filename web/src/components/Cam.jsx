@@ -71,16 +71,16 @@ export default function Cam() {
         <Container style={{marginTop: "40px", marginBottom: "40px", justifyContent: "center", alignItems: "center", display: "flex"}}>
             <div className="App">
                 <main className="App-main">
-                    <h1>Extracted text</h1>
+                    <h1 style={{fontWeight: "bold", fontSize: "30px", marginTop: "15px"}}>Extracted Text</h1>
                     <Webcam
                         audio={false}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
                         videoConstraints={videoConstraints} />
                     <div className="text-box" style={{display: "flex", justifyContent: "center"}}>
-                        <p style={{textAlign: "center", maxWidth: "1000px"}}> {text} </p>
+                        <p className="extractedText"> {text} </p>
                     </div>
-                    <button onClick={handleClick} style={{height:50}}> convert to text</button>
+                        <button onClick={handleClick} style={{height:50}}> Convert To Text</button>
                 </main>
             </div>
         </Container>
