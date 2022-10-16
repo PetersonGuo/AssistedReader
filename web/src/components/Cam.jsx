@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../Cam.css';
+import "react-convert-image";
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import Container from 'react-bootstrap/Container';
-// import { useSpeechSynthesis } from "react-speech-kit";
+import { waitFor } from '@testing-library/react';
 
 const videoConstraints = {
     width: 440,
@@ -17,11 +18,43 @@ export default function Cam() {
 
     const msg = new SpeechSynthesisUtterance();
 
+    const handleClick = React.useCallback (
+        () => {
+            const imageSrc = webcamRef.current.getScreenshot();
+            Tesseract.recognize(
+                imageSrc, 'eng',
+                {
+                    logger: m => console.log(m)
+                }
+            )
+                .catch (x => {
+                    console.err(x);
+                })
+                .then(result => {
+                    let text = "";
+                    if (result.data.confidence > 50) {
+                        for (let i of result.data.text)
+                            if ((i <= 'Z' && i >= 'A') || (i <= 'z' && i >= 'a') || (i >= '0' && i <= '9') || i === ' ' || i === ',' || i === '.' || i === '!' || i === '\'' || i === '"')
+                                text += i;
+                        console.log(text);
+                    }
+
+                    setText(text);
+                    speech(text);
+                })
+    }, [webcamRef]);
+
     async function speech(txt) {
         txt = txt.replace(/ +/g, ' ');
         console.log('speech: ' + txt);
-        msg.text = txt;
-        window.speechSynthesis.speak(msg);
+        if (txt.length > 0) {
+            msg.text = txt;
+            window.speechSynthesis.speak(msg);
+            msg.onend = function(e) {
+                handleClick();
+            }
+        } else 
+            handleClick();
     }
     
     // async function correct(txt) {
@@ -40,32 +73,6 @@ export default function Cam() {
     //         .then(response => console.log(response))
     //         .catch(err => console.error(err));
     // }
-
-    const handleClick = React.useCallback(
-        () => {
-            const imageSrc = webcamRef.current.getScreenshot();
-            Tesseract.recognize(
-                imageSrc, 'eng',
-                {
-                    logger: m => console.log(m > 50 ? m : '')
-                }
-            )
-                .catch (err => {
-                    console.error(err);
-                })
-                .then(result => {
-                    let text = "";
-                    if (result.data.confidence > 50) {
-                        for (let i of result.data.text)
-                            if ((i <= 'Z' && i >= 'A') || (i <= 'z' && i >= 'a') || (i >= '0' && i <= '9') || i === ' ' || i === ',' || i === '.' || i === '!' || i === '\'' || i === '"')
-                                text += i;
-                        console.log(text);
-                    }
-
-                    setText(text);
-                    speech(text);
-                })
-        }, [webcamRef]);
 
     return (
         <Container style={{marginTop: "40px", marginBottom: "40px", justifyContent: "center", alignItems: "center", display: "flex"}}>
