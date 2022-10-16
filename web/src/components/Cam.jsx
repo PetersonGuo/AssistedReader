@@ -3,6 +3,7 @@ import '../Cam.css';
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import Container from 'react-bootstrap/Container';
+import { useSpeechSynthesis } from "react-speech-kit";
 
 const videoConstraints = {
     width: 440,
@@ -15,6 +16,13 @@ export default function Cam() {
     const webcamRef = React.useRef(null);
     const [text, setText] = useState("");
 
+    const {speak} = useSpeechSynthesis();
+
+    async function speech(txt) {
+        console.log('speech: ' + txt);
+        speak({text: ""+txt});
+    }
+    
     const handleClick = React.useCallback(
         () => {
             const imageSrc = webcamRef.current.getScreenshot();
@@ -36,6 +44,7 @@ export default function Cam() {
                         console.log(text);
                     }
                     setText(text);
+                    speech(text);
                 })
         }, [webcamRef]);
 
