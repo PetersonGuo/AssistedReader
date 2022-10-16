@@ -19,10 +19,28 @@ export default function Cam() {
     const {speak} = useSpeechSynthesis();
 
     async function speech(txt) {
+        txt = txt.replace(/ +/g, ' ');
         console.log('speech: ' + txt);
-        speak({text: ""+txt});
+        speak({text: ''+txt});
     }
     
+    async function correct(txt) {
+        const options = {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+                'X-RapidAPI-Host': 'jspell-checker.p.rapidapi.com'
+            },
+            body: '{"language":"enUS","fieldvalues":"thiss is intresting","config":{"forceUpperCase":false,"ignoreIrregularCaps":false,"ignoreFirstCaps":true,"ignoreNumbers":true,"ignoreUpper":false,"ignoreDouble":false,"ignoreWordsWithNumbers":true}}'
+        };
+        
+        fetch('https://jspell-checker.p.rapidapi.com/check', options)
+            .then(response => response.json())
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
+    }
+
     const handleClick = React.useCallback(
         () => {
             const imageSrc = webcamRef.current.getScreenshot();
@@ -43,6 +61,7 @@ export default function Cam() {
                                 text += i;
                         console.log(text);
                     }
+
                     setText(text);
                     speech(text);
                 })
