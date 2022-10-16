@@ -14,6 +14,7 @@ const videoConstraints = {
 export default function Cam() {
     const webcamRef = React.useRef(null);
     const [text, setText] = useState("");
+    const [toggle, setToggle] = useState(false);    
 
     const msg = new SpeechSynthesisUtterance();
 
@@ -50,10 +51,10 @@ export default function Cam() {
             msg.text = txt;
             window.speechSynthesis.speak(msg);
             msg.onend = function(e) {
-                handleClick();
+                if (toggle) handleClick();
             }
         } else 
-            handleClick();
+            if (toggle) handleClick();
     }
     
     // async function correct(txt) {
@@ -86,7 +87,9 @@ export default function Cam() {
                     <div className="text-box" style={{display: "flex", justifyContent: "center"}}>
                         <p className="extractedText"> {text} </p>
                     </div>
-                        <button onClick={handleClick} style={{height:50}}> Convert To Text</button>
+                    <button onClick={()=>{setToggle(!toggle);handleClick();}} style={{height:50}}>
+                        {toggle?'Start Reading':'Stop Reading'}
+                    </button>
                 </main>
             </div>
         </Container>
