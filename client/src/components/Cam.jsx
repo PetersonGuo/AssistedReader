@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import '../Cam.css';
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import Container from 'react-bootstrap/Container';
-import { waitFor } from '@testing-library/react';
 
 const videoConstraints = {
     width: 440,
@@ -14,7 +13,7 @@ const videoConstraints = {
 export default function Cam() {
     const webcamRef = React.useRef(null);
     const [text, setText] = useState("");
-    const [toggle, setToggle] = useState(false);    
+    const [toggle, setToggle] = useState(false);
 
     const msg = new SpeechSynthesisUtterance();
 
@@ -42,7 +41,7 @@ export default function Cam() {
                     setText(text);
                     speech(text);
                 })
-    }, [webcamRef]);
+        }, [webcamRef]);
 
     async function speech(txt) {
         txt = txt.replace(/ +/g, ' ');
@@ -50,13 +49,15 @@ export default function Cam() {
         if (txt.length > 0) {
             msg.text = txt;
             window.speechSynthesis.speak(msg);
-            msg.onend = function(e) {
+            msg.onend = function() {
+                handleClick();
                 if (toggle) handleClick();
             }
-        } else 
-            if (toggle) handleClick();
+        } else
+            handleClick();
+        if (toggle) handleClick();
     }
-    
+
     // async function correct(txt) {
     //     const options = {
     //         method: 'POST',
@@ -67,7 +68,7 @@ export default function Cam() {
     //         },
     //         body: '{"language":"enUS","fieldvalues":"thiss is intresting","config":{"forceUpperCase":false,"ignoreIrregularCaps":false,"ignoreFirstCaps":true,"ignoreNumbers":true,"ignoreUpper":false,"ignoreDouble":false,"ignoreWordsWithNumbers":true}}'
     //     };
-        
+
     //     fetch('https://jspell-checker.p.rapidapi.com/check', options)
     //         .then(response => response.json())
     //         .then(response => console.log(response))
