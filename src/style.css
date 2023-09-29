@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .header {
   display: flex;
   justify-content: center;
@@ -51,14 +55,8 @@
 }
 
 .description {
-  display: flex;
-  flex-flow: column wrap;
-  width: 300px;
   border-radius: 20px;
-  padding: 10px 10px 10px 10px;
-  margin-top: 40px;
-  justify-content: space-evenly;
-  box-shadow: 5px 10px 20px 10px rgb(40, 50, 255);
+  padding: 10px;
   background-color: rgb(0, 212, 255);
 }
 

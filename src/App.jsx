@@ -1,7 +1,5 @@
-import "./App.css";
 import "./style.css";
-import React, { useState, Component } from "react";
-import Header from "./components/Header";
+import React, { Component } from "react";
 import Description from "./components/Description";
 import "./components/Cam";
 import Cam from "./components/Cam";
@@ -9,9 +7,9 @@ import Cam from "./components/Cam";
 class App extends Component {
     render() {
         return (
-            <div>
-                <Header />
-                <div className="container">
+            <div className={"w-screen h-screen"}>
+                <h1 className="header">Assistant Reader</h1>
+                <div className="w-full justify-evenly grid grid-cols-3 px-10 py-10">
                     <Description
                         sub="What Is Assistance Reader?"
                         l1="An app designed to grant blind individuals the ability to read text"
@@ -28,10 +26,9 @@ class App extends Component {
                         l2="Click the button and listen as the text gets read out loud"
                     />
                 </div>
-            <Cam/>
-        </div>
-    ); 
-    } 
+            <Cam />
+            </div>
+        );}
 }
 
 export default App;
