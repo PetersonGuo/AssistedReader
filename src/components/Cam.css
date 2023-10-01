@@ -8,18 +8,10 @@ p, h1, h2, h3, h4, h5 {
     color: white;
 }
 
-video {
-    border-radius: 5%;
-}
-
-html {
-    background-color: #1c1c1c;
-}
-
 button {
     flex: 1;
 
-    border:none;
+    border: none;
     align-content: center;
     border-radius: 8px;
 
@@ -40,13 +32,12 @@ button:hover {
     background-color: rgb(72, 116, 194);
     transition: 0.3s;
 }
+
 button:active {
     background-color: rgb(18, 69, 180);
 }
 
-.extractedText{
-    textAlign: "center";
-    maxWidth: "1000px";
+.extractedText {
     font-family: "Kanit", sans-serif;
     font-style: italic;
     font-weight: bold;
