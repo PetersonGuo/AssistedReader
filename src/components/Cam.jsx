@@ -71,10 +71,10 @@ export default function Cam() {
                     ref={webcamRef}
                     screenshotFormat="image/jpeg"
                     videoConstraints={videoConstraints}
-                    className={"w-[440px] h-[400px] border-[5px] border-black rounded-3xl"}
+                    className={"h-50 border-2 border-black rounded-3xl"}
                 />
-                <h1 className={"font-[30px] mt-[15px]"}>Extracted Text</h1>
-                <p className="text-box extractedText flex justify-center"> {text} </p>
+                <h1 className={"text-lg my-3"}>Extracted Text</h1>
+                <p className="text-box extractedText text-center"> {text} </p>
                 <div className={"flex row"}>
                     <button onClick={() => {
                         setReadData(!readData)
