@@ -2,7 +2,7 @@
 FROM python:3.8-slim
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /
 
 # Copy the requirements file into the container
 COPY requirements.txt .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Start the Flask app
-CMD ["python", "app.py"]
+CMD ["python", "server.py"]
