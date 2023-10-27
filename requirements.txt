@@ -1,3 +1,0 @@
-autocorrect
-Flask
-gunicorn
