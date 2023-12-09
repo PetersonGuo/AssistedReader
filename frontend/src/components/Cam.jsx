@@ -13,7 +13,7 @@ const videoConstraints = {
 export default function Cam() {
     const webcamRef = useRef(null);
     const [text, setText] = useState("");
-    const [speak, setSpeak] = useState(false);
+    const [speak, setSpeak] = useState(true);
     const [readData, setReadData] = useState(false);
     const [done, setDone] = useState(true);
 
@@ -35,16 +35,15 @@ export default function Cam() {
     }
 
     function speakText(txt) {
-        const speech = new SpeechSynthesisUtterance(txt);
         speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(txt);
         speechSynthesis.rate = 1.4;
+        console.log('speech started')
         speechSynthesis.speak(speech);
-        setTimeout(() => {
-            speech.onend = () => {
-                console.log('speech ended');
-                setDone(true);
-            }
-        }, 30000); // 30 seconds timeout
+        speech.onend = () => {
+            console.log('speech ended');
+            setDone(true);
+        }
     }
 
     useEffect(() => {
@@ -66,7 +65,6 @@ export default function Cam() {
                                 await autoCorrect(txt);
                                 console.log('autocorrected: ' + txt);
                                 if (speak) {
-                                    console.log('speech');
                                     speakText(txt);
                                 } else {
                                     setDone(true);
