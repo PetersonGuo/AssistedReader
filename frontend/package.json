@@ -10,7 +10,7 @@
     "react-scripts": "^5.0.1",
     "react-webcam": "7.2.0",
     "spellchecker": "^3.7.1",
-    "tesseract.js": "5.0.2",
+    "tesseract.js": "5.0.3",
     "web-vitals": "3.5.0"
   },
   "scripts": {

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Cam.css';
 import Webcam from "react-webcam";
-import Tesseract from "tesseract.js";
+import {createWorker} from "tesseract.js";
 import {GoMute, GoUnmute} from "react-icons/go";
 
 const videoConstraints = {
@@ -41,8 +41,12 @@ export default function Cam() {
         speechSynthesis.rate = 1.4;
         console.log('speech started')
         speechSynthesis.speak(speech);
+        speech.onerror = () => {
+            console.log('speech error');
+            setDone(true);
+        };
+
         speech.onend = () => {
-            console.log('speech ended');
             setDone(true);
         }
     }
@@ -52,28 +56,28 @@ export default function Cam() {
         const pause = setInterval(async () => {
             if (readData) {
                 setDone(false);
-                await Tesseract.recognize(
-                    webcamRef.current.getScreenshot(), 'eng'
-                )
-                    .catch(x => {
-                        console.error(x);
-                    })
-                    .then(
-                        async result => {
-                            let txt = result.data.text;
-                            console.log("confidence: " + result.data.confidence);
-                            if (result.data.confidence > 50 && txt.length > 0) {
-                                await autoCorrect(txt);
-                                console.log('autocorrected: ' + txt);
-                                if (speak) {
-                                    speakText(txt);
-                                } else {
-                                    setDone(true);
-                                }
-                            } else {
-                                setDone(true);
-                            }
-                        });
+                const worker = await createWorker('eng');
+                const ret = await worker.recognize(webcamRef.current.getScreenshot());
+                let txt = ret.data.text;
+                console.log("confidence: " + ret.data.confidence);
+                if (ret.data.confidence > 50 && txt.length > 0) {
+                    await autoCorrect(txt);
+                    console.log('autocorrected: ' + txt);
+                    if (speak) {
+                        speakText(txt);
+                        // txt.split('[.,!?-]+').forEach(x => {
+                        //     if (x.length > 0) {
+                        //         speakText(x);
+                        //     }
+                        // });
+                        // console.log('speech ended');
+                    } else {
+                        setDone(true);
+                    }
+                } else {
+                    setDone(true);
+                }
+                await worker.terminate();
             }
         }, 100);
         return () => clearInterval(pause);
