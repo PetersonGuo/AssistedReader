@@ -13,6 +13,7 @@ const videoConstraints = {
 export default function Cam() {
     const webcamRef = useRef(null);
     const [text, setText] = useState("");
+    const [textArr, setTextArr] = useState([]); // [text, text, text
     const [speak, setSpeak] = useState(true);
     const [readData, setReadData] = useState(false);
     const [done, setDone] = useState(true);
@@ -34,9 +35,9 @@ export default function Cam() {
             });
     }
 
-    function speakText(txt) {
+    function speakText(iter) {
         speechSynthesis.cancel();
-        const speech = new SpeechSynthesisUtterance(txt);
+        const speech = new SpeechSynthesisUtterance(textArr[iter]);
         console.log(speech);
         speechSynthesis.rate = 1.4;
         console.log('speech started')
@@ -47,7 +48,12 @@ export default function Cam() {
         };
 
         speech.onend = () => {
-            setDone(true);
+            if (iter + 1 < textArr.length) {
+                speakText(iter + 1);
+            } else {
+                setDone(true);
+                console.log('speech ended');
+            }
         }
     }
 
@@ -63,14 +69,11 @@ export default function Cam() {
                 if (ret.data.confidence > 50 && txt.length > 0) {
                     await autoCorrect(txt);
                     console.log('autocorrected: ' + txt);
+                    setText(txt);
                     if (speak) {
-                        speakText(txt);
-                        // txt.split('[.,!?-]+').forEach(x => {
-                        //     if (x.length > 0) {
-                        //         speakText(x);
-                        //     }
-                        // });
-                        // console.log('speech ended');
+                        setTextArr(txt.split(/([,.?!\s])/));
+                        console.log(textArr);
+                        speakText(0);
                     } else {
                         setDone(true);
                     }
@@ -108,6 +111,7 @@ export default function Cam() {
                                 onClick={() => {
                                     setSpeak(!speak);
                                     speechSynthesis.cancel();
+                                    console.log('speech cancelled');
                                 }}/>
                 }
             </div>
