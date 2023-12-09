@@ -5,8 +5,8 @@ import Tesseract from "tesseract.js";
 import {GoMute, GoUnmute} from "react-icons/go";
 
 const videoConstraints = {
-    width: 440,
-    height: 400,
+    width: 1920,
+    height: 1080,
     facingMode: "user"
 };
 
@@ -37,6 +37,7 @@ export default function Cam() {
     function speakText(txt) {
         speechSynthesis.cancel();
         const speech = new SpeechSynthesisUtterance(txt);
+        console.log(speech);
         speechSynthesis.rate = 1.4;
         console.log('speech started')
         speechSynthesis.speak(speech);
@@ -85,7 +86,7 @@ export default function Cam() {
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
                 videoConstraints={videoConstraints}
-                className={"h-50 border-2 mx-auto border-black rounded-3xl"}
+                className={"h-96 border-2 mx-auto border-black rounded-3xl"}
             />
             <h1 className={"text-lg my-3 font-bold"}>Extracted Text</h1>
             <p className="text-center w-[75%] h-[8%] overflow-y-scroll mx-auto bottom-24 fixed inset-x-0"> {text} </p>
@@ -100,7 +101,10 @@ export default function Cam() {
                         <GoUnmute className={"text-white hover:cursor-pointer"} size={30}
                                   onClick={() => setSpeak(!speak)}/> :
                         <GoMute className={"text-white hover:cursor-pointer"} size={30}
-                                onClick={() => setSpeak(!speak)}/>
+                                onClick={() => {
+                                    setSpeak(!speak);
+                                    speechSynthesis.cancel();
+                                }}/>
                 }
             </div>
         </main>
