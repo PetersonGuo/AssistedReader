@@ -74,7 +74,7 @@ export default function Cam() {
                             }
                         });
             }
-        }, 500);
+        }, 100);
         return () => clearInterval(pause);
     }, [text, readData, speak, done]);
 
